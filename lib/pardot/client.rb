@@ -4,7 +4,7 @@ module Pardot
     
     include HTTParty
     base_uri 'https://pi.pardot.com'
-    format :xml
+    format :json
     
     include Authentication
     include Http
@@ -16,6 +16,7 @@ module Pardot
     include Objects::Visitors
     include Objects::Visits
     include Objects::VisitorActivities
+    include Objects::Campaigns
     
     attr_accessor :email, :password, :user_key, :api_key, :format
     
